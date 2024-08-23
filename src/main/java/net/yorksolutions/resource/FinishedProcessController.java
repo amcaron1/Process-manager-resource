@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*")
 @RequestMapping("/")
 public class FinishedProcessController {
     private FinishedProcessService service;
