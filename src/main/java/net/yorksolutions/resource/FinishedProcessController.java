@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/")
 public class FinishedProcessController {
     private FinishedProcessService service;
@@ -23,9 +24,9 @@ public class FinishedProcessController {
     }
 
     @GetMapping("/findAllFinishedProcesses")
-    @CrossOrigin
+//    @CrossOrigin
     public Iterable<FinishedProcess> receiveFindAllFinishedProcesses() {
-
+        System.out.println("In receiveFindAllFinishedProcesses");
         return service.findAllFinishedProcesses();
     }
 
